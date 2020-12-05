@@ -1,0 +1,382 @@
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.mainbanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: auto;
+}
+
+.bannertext {
+  text-align: center;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .mainbanner {
+    flex-direction: row;
+  }
+  .title,
+  .description {
+    text-align: left;
+  }
+  .bannertext {
+    text-align: left;
+  }
+}
+
+.mainbanner img {
+  margin: 30px 0;
+  width: 400px;
+}
+
+.aboutsection {
+  margin: 25px auto;
+  background-color: #f5f5f5;
+  text-align: left;
+  padding: 20px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 11px 30px -16px rgba(0, 0, 0, 0.2);
+}
+
+.aboutdescription {
+  max-width: 700px;
+}
+
+.aboutsection h2 {
+  font-size: 30px;
+}
+
+@media (min-width: 768px) {
+  .aboutsection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .aboutsection img {
+    width: 450px;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img {
+  margin-left: 0.5rem;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: #00497d;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+/* .code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.card {
+  margin: 1rem;
+  flex-basis: 45%;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.logo {
+  height: 1em;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+} */
+
+.Navbar {
+  height: 4em;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00497d;
+  color: white;
+  padding: 10px 0px;
+  box-sizing: border-box;
+  z-index: 90;
+
+  ul {
+    margin: 0;
+    padding: 0 40px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-flow: row;
+    justify-content: flex-end;
+  }
+}
+
+.NavItem {
+  margin: 10px 0;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.NavItem a {
+  color: #307f1a;
+  text-decoration: none;
+  font-weight: 400;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  transition: 0.1s;
+}
+
+.NavItem a:hover,
+.NavItem a:active .NavItem a.active {
+  border-bottom: 4px solid #307f1a;
+  border-radius: 4px;
+}
+
+.SideDrawer {
+  position: fixed;
+  width: 380px;
+  max-width: 80%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  background-color: #c9efae;
+  padding: 32px 16px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-out;
+}
+
+.Open {
+  transform: translateX(0);
+}
+
+.Close {
+  transform: translateX(-100%);
+}
+
+.Backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.DrawerToggle {
+  width: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.DrawerToggle div {
+  width: 90%;
+  height: 4px;
+  background-color: #307f1a;
+}
+
+@media (max-width: 899px) {
+  .DesktopOnly {
+    display: none;
+  }
+}
+
+@media (max-width: 559px) {
+  .DesktopOnlyMedium {
+    display: none;
+  }
+}
+
+@media (min-width: 560px) {
+  .SingleLogo {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .SideDrawer {
+    display: none;
+  }
+  .NavLinks {
+    flex-flow: row;
+  }
+
+  .Logo {
+    margin-bottom: 0;
+  }
+
+  .NavItem {
+    margin: 0;
+    display: flex;
+    height: 100%;
+    width: auto;
+    align-items: center;
+  }
+
+  .NavItem a {
+    height: 100%;
+    padding: 16px 10px;
+    border-bottom: 4px solid transparent;
+  }
+
+  .NavItem a:hover,
+  .NavItem a:active .NavItem a.active {
+    border-bottom: 4px solid #307f1a;
+  }
+}
+
+@media (min-width: 900px) {
+  .DrawerToggle {
+    display: none;
+  }
+}
+
+/******DASHBOARD******/
+
+.Dashboard {
+  background-color: #e7e8e9;
+  margin-left: 244px;
+  margin-top: 64px;
+  height: 92.2vh;
+}
+
+.SideBar {
+  background-color: #fff;
+  height: 100vh;
+  width: 244px;
+  margin: 4.5em 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid #e5e5e5;
+    a {
+      font-size: 18px;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      padding-left: 2em;
+      border-top: 1px solid #e5e5e5;
+    }
+  }
+}
+
+.List {
+  background-color: white;
+  margin: 0 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.16);
+  height: 80vh;
+}

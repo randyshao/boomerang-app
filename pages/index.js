@@ -1,65 +1,53 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Link from 'next/link';
+import ButtonBlock from '../components/util/ButtonBlock';
+import styles from '../styles/Home.module.scss';
+import Layout from '../components/Layout';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <div className={styles.mainbanner}>
+            <div className={styles.bannertext}>
+              <h1 className={styles.title}>Welcome to Boomerang</h1>
+              <p className={styles.description}>
+                Provide growth opportunities to companies and job candidates
+                through simple, enlightening feedback.
+              </p>
+              <ButtonBlock link='https://devpost.com/software/boomerang'>
+                Learn More About Boomerang
+              </ButtonBlock>
+            </div>
+            <img src='/mainbanner.svg' />
+          </div>
+          <div className={styles.aboutsection}>
+            <div className={styles.aboutdescription}>
+              <h2>
+                Streamline the feedback process between job canadidates and
+                interviewers.
+              </h2>
+              <p>
+                To often, job canadidates who have been rejected from the
+                interview process have been unable to receive actionable
+                feedback from their interviewer.
+              </p>
+            </div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+            <img src='/aboutbanner.svg' />
+          </div>
+        </main>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+        <footer className={styles.footer}>
+          <Link
+            href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
+            rel='noopener noreferrer'
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+            <a target='_blank'>Powered by Team Boomerang</a>
+          </Link>
+        </footer>
+      </div>
+    </Layout>
+  );
 }
