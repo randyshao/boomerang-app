@@ -11,7 +11,7 @@ const Navbar = (props) => {
         <header className={styles.Navbar}>
           <ul className={styles.NavLinks}>
             <li>
-              <Link href='/dashboard'>Sign up</Link>
+              <Link href='/myInterviews'>Sign up</Link>
             </li>
           </ul>
           {/* <div className='LogoContainer'>

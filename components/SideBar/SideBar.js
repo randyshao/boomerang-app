@@ -7,17 +7,17 @@ const SideBar = () => {
     <div className={styles.SideBar}>
       <ul>
         <li>
-          <Link href='/'>
+          <Link href='/myInterviews'>
             <a>My Interviews</a>
           </Link>
         </li>
         <li>
-          <Link href='/'>
+          <Link href='/myFeedback'>
             <a>My Feedback</a>
           </Link>
         </li>
         <li>
-          <Link href='/'>
+          <Link href='/actionItems'>
             <a>Action Items</a>
           </Link>
         </li>

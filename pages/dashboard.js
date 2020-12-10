@@ -2,18 +2,15 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SideBar from '../components/SideBar/SideBar';
 import styles from '../styles/Home.module.scss';
-import List from '../components/List/List';
+import MyInterviews from './myInterviews';
 
-const dashboard = () => {
+const Dashboard = () => {
   return (
     <Layout>
       <SideBar />
-      <div className={styles.Dashboard}>
-        <h1 style={{ marginLeft: '40px' }}>My Interviews</h1>
-        <List />
-      </div>
+      <div className={styles.Dashboard}></div>
     </Layout>
   );
 };
 
-export default dashboard;
+export default Dashboard;
